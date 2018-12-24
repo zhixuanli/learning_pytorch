@@ -1,3 +1,6 @@
 Chapter5/sub-test
 Chapter5/sub-train
 Chapter5/cifar10
+.idea/
+pytorch-book-master/
+*.zip

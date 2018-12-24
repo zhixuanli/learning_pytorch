@@ -29,7 +29,7 @@ transform = T.Compose([
 ])
 
 # 读取内置的resnet34预训练模型及其参数
-resnet34 = models.resnet34(pretrained=True)
+resnet34 = models.resnet34(pretrained=False)
 resnet34.fc = nn.Linear(512, 2)  # 替换最后一层为2分类，原本为ImageNet的1000类分类任务
 net = resnet34  # 赋值给net，统一化命名
 
@@ -76,7 +76,7 @@ def test():
             total += labels.size(0)
             correct += (predicted == labels).sum()
 
-        print('Accuracy in the test dataset: %d %%' % (100 * correct / total))
+        print('Accuracy in the test dataset: %.1f %%' % (100 * correct / total))
 
 classes = ('cat', 'dog')
 
