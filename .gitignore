@@ -5,3 +5,5 @@ pytorch-book-master/
 *.gz
 *.jpg
 *.swp
+*.pkl
+*.pyc
